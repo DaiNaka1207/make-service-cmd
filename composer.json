@@ -1,0 +1,30 @@
+{
+    "name": "dainaka/make-service-cmd",
+    "description": "A Composer library that enables the use of the php artisan make:service command in Laravel projects, simplifying the creation of service classes.",
+    "type": "library",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Dainaka\\MakeServiceCmd\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DaiNaka1207"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dainaka\\MakeServiceCmd\\Providers\\MakeServiceCmdServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-uninstall-cmd": [
+            "Dainaka\\MakeServiceCmd\\Scripts\\UninstallScripts::removeCommandFile"
+        ]
+    }
+}
